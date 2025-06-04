@@ -1,0 +1,155 @@
+:root {
+  --base-clr: #11121a;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5rem;
+}
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--base-clr);
+  color: var(--text-clr);
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+
+
+/*--------------SIDEBAR CODE--------------*/
+
+#Sidebar {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 1em;
+  background-color: var(--base-clr);
+  border-right: 1px solid var(--line-clr);
+
+  position: sticky;
+  top: 0;
+  align-self: start;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+#Sidebar.Close {
+  padding: 5px;
+  width: 60px;
+}
+
+#Sidebar ul {
+  list-style: none;
+}
+#Sidebar > ul > li:first-child {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  .logo {
+    font-weight: 600;
+  }
+}
+#Sidebar ul li.Active a {
+  color: var(--accent-clr);
+
+  svg {
+    fill: var(--accent-clr);
+  }
+}
+
+#Sidebar a, #Sidebar .Dropdown-Button, #Sidebar.Logo {
+  border-radius: .5em;
+  padding: .85em;
+  text-decoration: none;
+  color: var(--text-clr);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.Dropdown-Button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+#Sidebar svg {
+  flex-shrink: 0;
+  fill: var(--text-clr);
+
+}
+#Sidebar a span, #Sidebar .Dropdown-Button span {
+  flex-grow: 1;
+}
+#Sidebar a:hover, #Sidebar .Dropdown-Button:hover {
+  background-color: var(--hover-clr);
+}
+#Sidebar .Sub-Menu {
+  display: grid;
+  grid-template-columns: 0fr;
+  transition: 100ms ease-in-out;
+
+  > div {
+    overflow: hidden;
+  }
+}
+#Sidebar .Sub-Menu.Show {
+  grid-template-columns: 1fr;
+}
+.Dropdown-Button svg {
+  transition: 200ms ease;
+}
+.Rotate svg:last-child {
+  rotate: 180deg;
+}
+
+#Sidebar .Sub-Menu a{
+ padding-left: 2em;
+}
+#Toggle-Button {
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: .5em;
+  background: none;
+  cursor: pointer;
+
+  svg {
+    transition: rotate 150ms ease;
+  }
+}
+#Toggle-Button:hover {
+  background-color: var(--hover-clr);
+}
+
+
+
+/*AAAA*/
+main {
+  padding: min(30px, 7%);
+}
+
+main p {
+  color: var(--secondary-text-clr);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.Container {
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+
+  h2, p { margin-top: 1em }
+}
