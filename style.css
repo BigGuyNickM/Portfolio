@@ -23,6 +23,30 @@ body {
   grid-template-columns: auto 1fr;
 }
 
+/*AAAA*/
+main {
+  padding: min(30px, 7%);
+}
+
+main p {
+  color: var(--secondary-text-clr);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.Container {
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+
+  h2, p { margin-top: 1em }
+}
+
+
+
+
+
 
 
 /*--------------SIDEBAR CODE--------------*/
@@ -38,7 +62,7 @@ body {
   position: sticky;
   top: 0;
   align-self: start;
-  transition: 300ms ease-in-out;
+  transition: 300ms ease;
   overflow: hidden;
   text-wrap: nowrap;
 }
@@ -53,11 +77,16 @@ body {
 #Sidebar > ul > li:first-child {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-bottom: 16px;
-  .logo {
+  .Logo {
+    padding-left: 10px;
+    padding-right: 10px;
     font-weight: 600;
   }
 }
+
+
 #Sidebar ul li.Active a {
   color: var(--accent-clr);
 
@@ -96,15 +125,15 @@ body {
 }
 #Sidebar .Sub-Menu {
   display: grid;
-  grid-template-columns: 0fr;
-  transition: 100ms ease-in-out;
+  grid-template-rows: 0fr;
+  transition: 300ms ease;
 
   > div {
     overflow: hidden;
   }
 }
 #Sidebar .Sub-Menu.Show {
-  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 .Dropdown-Button svg {
   transition: 200ms ease;
@@ -116,7 +145,7 @@ body {
 #Sidebar .Sub-Menu a{
  padding-left: 2em;
 }
-#Toggle-Button {
+#Collapse-Button {
   margin-left: auto;
   padding: 1em;
   border: none;
@@ -128,28 +157,70 @@ body {
     transition: rotate 150ms ease;
   }
 }
-#Toggle-Button:hover {
+#Collapse-Button:hover {
   background-color: var(--hover-clr);
 }
 
 
+/* Grid for Gallery */
+#Gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
 
-/*AAAA*/
-main {
-  padding: min(30px, 7%);
-}
-
-main p {
-  color: var(--secondary-text-clr);
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.Container {
   border: 1px solid var(--line-clr);
   border-radius: 1em;
   margin-bottom: 20px;
   padding: min(3em, 15%);
+}
 
-  h2, p { margin-top: 1em }
+/* Post Card */
+.post-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-card h3 {
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Post View (in post.html) */
+#post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#post-container img {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#post-container p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }

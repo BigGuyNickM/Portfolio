@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="post-tag" content="Featured"/>
     <title>Nick Morse's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="main.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="../gallery.js" defer></script>
   </head>
   <body>
 
@@ -13,21 +15,21 @@
     <nav id="Sidebar">
       <ul>
         <li>
-          <span class="Logo">Nick Morse</span>
-          <button onclick=toggle_sidebar() id="Toggle-Button">
+          <span class="Logo">Nick Morse's Portfolio</span>
+          <button onclick=toggle_sidebar() id="Collapse-Button">
             <svg width="24" height="24" viewBox="0 0 24 24" width="24"fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.8846 17.2946C17.2742 17.6842 17.9058 17.6842 18.2954 17.2946V17.2946C18.6847 16.9053 18.685 16.2743 18.2961 15.8846L15.1248 12.7063C14.7353 12.316 14.7353 11.684 15.1248 11.2937L18.2961 8.11538C18.685 7.72569 18.6847 7.09466 18.2954 6.70538V6.70538C17.9058 6.31581 17.2742 6.31581 16.8846 6.70538L12.2971 11.2929C11.9066 11.6834 11.9066 12.3166 12.2971 12.7071L16.8846 17.2946Z"/><path d="M10.2946 17.2946C10.6842 17.6842 11.3158 17.6842 11.7054 17.2946V17.2946C12.0947 16.9053 12.095 16.2743 11.7062 15.8846L8.5348 12.7063C8.1453 12.316 8.1453 11.684 8.5348 11.2937L11.7062 8.11538C12.095 7.72569 12.0947 7.09466 11.7054 6.70538V6.70538C11.3158 6.31581 10.6842 6.31581 10.2946 6.70538L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L10.2946 17.2946Z"/></svg>
           </button>
         </li>
         <li class="Active"> <!--Base page, featured work / socials-->
-          <a href="index.html">
+          <a href="/index.html">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.35 20L13.4 21.925C13.0167 22.3083 12.55 22.5 12 22.5C11.45 22.5 10.9833 22.3083 10.6 21.925L8.65 20H6C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18V15.35L2.075 13.4C1.69167 13.0167 1.5 12.55 1.5 12C1.5 11.45 1.69167 10.9833 2.075 10.6L4 8.65V6C4 5.45 4.19583 4.97917 4.5875 4.5875C4.97917 4.19583 5.45 4 6 4H8.65L10.6 2.075C10.9833 1.69167 11.45 1.5 12 1.5C12.55 1.5 13.0167 1.69167 13.4 2.075L15.35 4H18C18.55 4 19.0208 4.19583 19.4125 4.5875C19.8042 4.97917 20 5.45 20 6V8.65L21.925 10.6C22.3083 10.9833 22.5 11.45 22.5 12C22.5 12.55 22.3083 13.0167 21.925 13.4L20 15.35V18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20H15.35ZM12 14.475L13.925 15.625C14.1083 15.7417 14.2875 15.7375 14.4625 15.6125C14.6375 15.4875 14.7 15.3167 14.65 15.1L14.15 12.925L15.85 11.45C16.0167 11.3 16.0667 11.1208 16 10.9125C15.9333 10.7042 15.7833 10.5917 15.55 10.575L13.325 10.4L12.45 8.325C12.3667 8.125 12.2167 8.025 12 8.025C11.7833 8.025 11.6333 8.125 11.55 8.325L10.675 10.4L8.45 10.575C8.21667 10.5917 8.06667 10.7042 8 10.9125C7.93333 11.1208 7.98333 11.3 8.15 11.45L9.85 12.925L9.35 15.1C9.3 15.3167 9.3625 15.4875 9.5375 15.6125C9.7125 15.7375 9.89167 15.7417 10.075 15.625L12 14.475Z"/></svg>
             <span>Featured</span>
           </a> 
         </li>
         <li> <!--About me w/ socials-->
-          <a href="about.html">
+          <a href="/about.html">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM6 10C6 9.44772 6.44772 9 7 9H17C17.5523 9 18 9.44772 18 10V10C18 10.5523 17.5523 11 17 11H7C6.44772 11 6 10.5523 6 10V10ZM14 13C14 13.5523 13.5523 14 13 14H7C6.44772 14 6 13.5523 6 13V13C6 12.4477 6.44772 12 7 12H13C13.5523 12 14 12.4477 14 13V13ZM18 7C18 7.55228 17.5523 8 17 8H7C6.44772 8 6 7.55228 6 7V7C6 6.44772 6.44772 6 7 6H17C17.5523 6 18 6.44772 18 7V7Z"/></svg>
-            <span>About</span>
+            <span>About Me</span>
           </a> 
         </li>
         <li> <!--All my work-->
@@ -38,42 +40,23 @@
           </button>
           <ul class="Sub-Menu">
             <div>
-              <li><a href="#">Games</a></li>
-              <li><a href="#">3D Models</a></li>
-              <li><a href="#">Artwork</a></li>
-              <li><a href="#">Code</a></li>
+              <li><a href="/Gallery-Pages/games-gallery.html">Games</a></li>
+              <li><a href="/Gallery-Pages/3d-models-gallery.html">3D Models</a></li>
+              <li><a href="/Gallery-Pages/artwork-gallery.html">Artwork</a></li>
+              <li><a href="/Gallery-Pages/code-gallery.html">Code</a></li>
             </div>
           </ul>
         </li>
       </ul>
     </nav>
 
-
     <main>
       <div class="Container">
-        <h2> Hello World</h2>
+        <h2>Featured</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem voluptates incidunt dolorem corrupti ducimus expedita libero, ullam, iure perspiciatis debitis deserunt hic quis numquam facere voluptas adipisci laboriosam id. Provident?</p>
       </div>
-      <div class="Container">
-        <h2> Hello World</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem voluptates incidunt dolorem corrupti ducimus expedita libero, ullam, iure perspiciatis debitis deserunt hic quis numquam facere voluptas adipisci laboriosam id. Provident?</p>
-      </div>
-      <div class="Container">
-        <h2> Hello World</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem voluptates incidunt dolorem corrupti ducimus expedita libero, ullam, iure perspiciatis debitis deserunt hic quis numquam facere voluptas adipisci laboriosam id. Provident?</p>
-      </div>
-      <div class="Container">
-        <h2> Hello World</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem voluptates incidunt dolorem corrupti ducimus expedita libero, ullam, iure perspiciatis debitis deserunt hic quis numquam facere voluptas adipisci laboriosam id. Provident?</p>
-      </div>
-      <div class="Container">
-        <h2> Hello World</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem voluptates incidunt dolorem corrupti ducimus expedita libero, ullam, iure perspiciatis debitis deserunt hic quis numquam facere voluptas adipisci laboriosam id. Provident?</p>
-      </div>
-      <div class="Container">
-        <h2> Hello World</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem voluptates incidunt dolorem corrupti ducimus expedita libero, ullam, iure perspiciatis debitis deserunt hic quis numquam facere voluptas adipisci laboriosam id. Provident?</p>
-      </div>
+
+      <div id="Gallery"></div>
     </main>
   </body>	
 </html>

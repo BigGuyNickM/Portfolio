@@ -1,4 +1,4 @@
-const toggle_button = document.getElementById('Toggle-Button')
+const collapse_button = document.getElementById('Collapse-Button')
 const sidebar = document.getElementById('Sidebar')
 
 
@@ -11,9 +11,7 @@ const toggle_sidebar = () => {
   })
 
   sidebar.classList.toggle('Close')
-  toggle_button.classList.toggle('Rotate')
-
-  
+  collapse_button.classList.toggle('Rotate')
 }
 
 const toggle_sub_menu = (button) => {
